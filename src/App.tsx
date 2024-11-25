@@ -1,12 +1,17 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { env } from "process";
-
-const foo = env.REACT_APP_URL;
+import React, { useEffect, useState } from "react";
+import apiClient from "./axios/axios";
 
 function App() {
-  return <div className="App">{foo}</div>;
+  const [foo, setFoo] = useState("");
+
+  useEffect(() => {
+    apiClient
+      .get("/")
+      .then((response) => setFoo(response.data))
+      .catch((e) => console.error(e));
+  }, []);
+
+  return <div className="App"> {foo} </div>;
 }
 
 export default App;
