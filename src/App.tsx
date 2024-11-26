@@ -1,17 +1,22 @@
-import React, { useEffect, useState } from "react";
-import apiClient from "./axios/axios";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import Login from "./Components/Login/Login";
+import { useEffect } from "react";
 
 function App() {
-  const [foo, setFoo] = useState("");
-
+  // TODO: Check here if the user is logged, also store the login state
+  const navigate = useNavigate();
   useEffect(() => {
-    apiClient
-      .get("/")
-      .then((response) => setFoo(response.data))
-      .catch((e) => console.error(e));
-  }, []);
+    console.log("test");
+    if (true) {
+      return navigate("/login");
+    }
+  }, [true]);
 
-  return <div className="App"> {foo} </div>;
+  return (
+    <Routes>
+      <Route path="/login" Component={Login}></Route>
+    </Routes>
+  );
 }
 
 export default App;
