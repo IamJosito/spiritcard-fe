@@ -1,0 +1,90 @@
+.login-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  gap: 20px;
+  margin-top: 44px;
+  font-size: 24px;
+  font-family: "GaretBook", sans-serif;
+}
+
+.title {
+  font-size: 64px;
+  font-family: "StoryMilk", sans-serif;
+}
+
+.login-card {
+  background-color: rgba(0, 34, 77, 0.5);
+  padding: 28px 50px;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid white;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
+}
+
+.email-data,
+.password-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-data > span,
+.password-data > span {
+  padding-left: 5px;
+}
+.email-data > input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.email-data > input,
+.password-data > input {
+  border-radius: 5px;
+  -webkit-appearance: none;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px 10px;
+  color: white;
+  font-size: 24px;
+}
+
+.login-options {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.login-option {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+.login-button {
+  border: 1px solid white;
+  margin: 40px auto 0 auto;
+  text-align: center;
+  width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.sing-up-link {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 25px;
+}
